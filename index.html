@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <style>
+      body {
+        font-family: sans-serif;
+        padding-left: 20%;
+        padding-right: 20%;
+      }
+      label {
+        font-size: 18px;
+        display: block;
+        padding-bottom: 10px;
+      }
+      input, textarea, select {
+        display: block;
+        width: 100%;
+        padding-bottom: 20px;
+      }
+
+      .clue {
+       margin-left: 0.25rem;
+       font-size: 0.9rem;
+       color: #87413F;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      form {
+        background-color: #B2FFFF;
+        padding: 40px 40px 40px 40px;
+      }
+
+      .form-group {
+        margin: 0 auto 1.25rem auto;
+        padding: 0.25rem;
+      }
+
+      .submit-button {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        background: #66FF00;
+        color: inherit;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+
+      input[type=checkbox]:not(old) + label,
+      input[type=radio   ]:not(old) + label {
+        display      : inline-block;
+        margin-left  : -28px;
+        padding-left : 28px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="title" class="text-center">Tell Me About Pet</h1>
+    <p id="description" class="description text-center">
+      This is a survey where you can tell us about your pet.
+    </p>
+    <form id="survey-form">
+      <label id="name-label">Name:</label>
+      <input type="text" name="name" id="name" required placeholder="First Name"><br>
+
+      <label id="email-label">Email:</label>
+      <input type="email" name="email" id="email" required placeholder="Best Email"><br>
+
+      <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+      <input 
+      type="number" 
+      name="age" 
+      id="number" 
+      min="10" 
+      max="99"
+      class="form-control" 
+      placeholder="Age"><br>
+
+      <label id="pet-type-label">Pet Type:</label>
+      <select id="dropdown" name="guitars">
+        <option value="cats">Cats</option>
+        <option value="dogs">Dogs</option>
+        <option value="birds">Birds</option>
+        <option value="fish">Fish</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label id="additional-comments-label">Additional Comments:</label>
+      <textarea placeholder="Additional Comments"></textarea><br>
+
+      <div id="button-area">
+        <label id="gender-label">Gender:</label>
+        <input type="radio" class="radio-inline" name="gender" value="male"> Male<br>
+        <input type="radio" class="radio-inline" name="gender" value="female"> Female<br>
+        <input type="radio" class="radio-inline" name="gender" value="other"> Other
+      </div>
+      <br>
+      <div id="button-area">
+        <label id="house-type-label">House Type:</label>
+        <input type="checkbox" name="house1" value="Apartment"> I live in an Apartment<br>
+        <input type="checkbox" name="house2" value="Condo"> I live in a Condo<br>
+        <input type="checkbox" name="house3" value="Townhouse" checked> I live in a Townhouse<br>
+      </div>
+      <br>
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </form>
+    <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
